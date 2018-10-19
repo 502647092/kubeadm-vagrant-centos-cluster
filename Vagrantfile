@@ -59,9 +59,7 @@ if [ "${NODE}" == "1" ]; then
   # ssh-keygen -q -f ~/.ssh/id_rsa -N ''
   cp /vagrant/rsa/id_rsa.pub ~/.ssh/id_rsa.pub 
   cp /vagrant/rsa/id_rsa.key ~/.ssh/id_rsa
-cat >> ~/.ssh/authorized_keys<<EOF
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2ekZ4FMeEo8L91YaRWUmdyM4nXN2eyzaM+Y68yDbIJ7E6E4+VvL+h2eYjjQxE6cN21DbLEzzob3Pgaud/+tPpWavgnMEGatxZOlN+idBwRYZR7mNcKVtZj1R+YeNfwcpGxMIyenBijeVb3AQj6CkLvhiWejld2HZQbc5jxwps3RJ8lDsSsf7xkRVz2dzjKeNTuRfDuBu13rE6LMRQPfRIEDDhEipRwOP9DGp8vbisgnLF11GfdKjtaciUSjeaReCO/k5zG4i8WdfBgmIHxSbF+dX6IvkuCrUlOf1skDNeafDzTjOYBCyT64PoB49UwLTvXSOcnYUprOrBN+F7gYJJ jtb@yumc.pw
-EOF
+  chmod 600 ~/.ssh/id_rsa
 fi
 cat /vagrant/rsa/id_rsa.pub >> ~/.ssh/authorized_keys
 
